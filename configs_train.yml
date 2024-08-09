@@ -10,7 +10,8 @@ Operation:
 Train:
   # Train Mehod [FL]
   Train_Method: "FL"
-  # Model Architecture
+  # Model Optimizer [SGD, Adam]
+  Optimizer: "SGD"
   # Number of rounds of training
   Epoch: 10
   # Number of users: K
@@ -28,10 +29,10 @@ Train:
   #Learning Rate Change Iter
   lr_change_iter: [100, 105]
 DATA:
-  # Dataset [CIAFR10]
-  Dataset: "CIFAR10"
+  # Dataset [CIAFR10, Mnist]
+  Dataset: "Mnist"
   # Split of the dataset [IID, NonIID]
-  Split: "NonIID"
+  Split: "IID"
   #Num class
   num_class: 10
   # Dataset mean and std used for data normalization
