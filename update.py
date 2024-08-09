@@ -30,7 +30,7 @@ class LocalUpdate(object):
         self.config = config
         self.logger = logger
         self.trainloader, self.validloader, self.testloader = self.train_val_test(
-            dataset, list(idxs))
+                dataset, list(idxs))
         self.device = 'cuda' if torch.cuda.is_available() and config.Operation.GPU else 'cpu'
         # Default criterion set to NLL loss function
         self.criterion = nn.NLLLoss().to(self.device)
@@ -41,7 +41,7 @@ class LocalUpdate(object):
         and user indexes.
         """
         # split indexes for train, validation, and test (80, 10, 10)
-        idxs_train = idxs[:int(0.8*len(idxs))]
+        idxs_train = idxs[:int(0.9*len(idxs))]
         idxs_val = idxs[int(0.8*len(idxs)):int(0.9*len(idxs))]
         idxs_test = idxs[int(0.9*len(idxs)):]
 
