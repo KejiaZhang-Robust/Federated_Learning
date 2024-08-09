@@ -1,0 +1,40 @@
+Operation:
+  # Name
+  Prefix: "WRN34_10"
+  #record
+  record_words: ""
+  # Resume
+  Resume: False
+  # GPU To use cuda, set to a specific GPU ID.
+  GPU: None
+Train:
+  # Train Mehod [FL]
+  Train_Method: "FL"
+  # Model Architecture
+  # Number of rounds of training
+  Epoch: 10
+  # Number of users: K
+  Num_users: 100
+  # Number of local epochs: E
+  Local_epoch: 10
+  # The fraction of clients: C
+  C: 0.1
+  # Local batch size: B
+  Local_bs: 10
+  # Learning rate
+  Lr: 0.01
+  #Moment
+  Momentum: 0.5
+  #Learning Rate Change Iter
+  lr_change_iter: [100, 105]
+DATA:
+  # Dataset [CIAFR10]
+  Dataset: "CIFAR10"
+  # Split of the dataset [IID, NonIID]
+  Split: "NonIID"
+  #Num class
+  num_class: 10
+  # Dataset mean and std used for data normalization
+  # CIFAR-10
+  mean: !!python/tuple [0.4914, 0.4822, 0.4465]
+  std: !!python/tuple [0.2471, 0.2435, 0.2616]
