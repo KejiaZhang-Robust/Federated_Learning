@@ -18,11 +18,13 @@ This repository implements federated learning (FL) using a ResNet architecture f
     git clone https://github.com/KejiaZhang-Robust/[your-repository-name].git
     ```
 
-2.  Install dependencies (replace `requirements.txt` with your actual file name if different):
+2.  Install dependencies :
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```
+pytorch
+numpy
+tqdm
+```
 
 **Usage:**
 
