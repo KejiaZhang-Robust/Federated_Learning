@@ -7,7 +7,6 @@ This repository implements federated learning (FL) using a ResNet architecture f
 **Key Features:**
 
   - **Federated Learning:** Enables training on distributed datasets residing on multiple devices.
-  - **WRN-34 Model:** Utilizes a deep convolutional neural network architecture for efficient learning.
   - **Configurable Training:** Offers flexibility through various settings in `configs_train.yml`.
 
 **Installation:**
@@ -21,9 +20,25 @@ This repository implements federated learning (FL) using a ResNet architecture f
 2.  Install dependencies :
 
 ```
-pytorch
-numpy
-tqdm
+name: FL_env
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch=2.4.0
+  - torchvision=0.19.0
+  - pytorch-cuda=12.1
+  - numpy
+  - pip:
+      - easydict
+      - pillow
+      - pyyaml
+      - scipy
+      - scikit-learn
+      - torchaudio == 2.4.0
+      - requests
+      - tdqm
 ```
 
 **Usage:**
@@ -78,4 +93,3 @@ tqdm
   - Consider adding screenshots or GIFs to showcase the project's functionality (optional).
   - Include links to relevant resources or tutorials on federated learning and the WRN-34 architecture (optional).
 
-**Remember to replace the bracketed placeholders with your specific details and files.** This comprehensive README file will provide a clear understanding of your federated learning code on GitHub, making it easier for others to contribute and use it effectively.
